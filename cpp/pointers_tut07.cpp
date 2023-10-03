@@ -5,8 +5,14 @@ Pointers can also point to objects, and you can use pointers to call methods and
 #include<iostream>
 using namespace std;
 
-int main()
-{
-    
+class MyClass {
+public:
+    int x;
+    MyClass(int val) : x(val) {}
+};
 
+int main() {
+    MyClass obj(10);
+    MyClass *ptr = &obj;
+    cout << ptr->x; // Outputs 10
 }
